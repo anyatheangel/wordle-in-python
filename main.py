@@ -62,7 +62,7 @@ def user_guess():
     while tries != -1:
         if tries == 0:
             return False
-        word_guess = (input(f"\nu got {tries} tries left. give me a guess: " + word)).upper()
+        word_guess = (input(f"\nu got {tries} tries left. give me a guess: ")).upper()
         if len(word_guess) != 5:
             print("boy enter a word with 5 letters")
             continue 
