@@ -57,12 +57,18 @@ def play_again():
 # takes in user's guess, while loop that goes on until no tries left
 def user_guess():
     global word
-    word = random.choice(words)
+    word = (random.choice(words)).upper()
     tries = 6
     while tries != -1:
         if tries == 0:
             return False
-        word_guess = input(f"\nu got {tries} tries left. give me a guess: " + word)
+        word_guess = (input(f"\nu got {tries} tries left. give me a guess: " + word)).upper()
+        if len(word_guess) != 5:
+            print("boy enter a word with 5 letters")
+            continue 
+        if word_guess.lower() not in words:
+            print("not in english word list.")
+            continue
         win_or_lose = check_letters(word, word_guess)
         if win_or_lose == True:
             return True
@@ -122,7 +128,6 @@ def game_loop():
             elif did_u_win == False: 
                 print("damnnn you lost lmao!")
                 time.sleep(1)
-                global word
                 print(f"btw the word was {word}")
             else:
                 return    
