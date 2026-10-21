@@ -105,7 +105,7 @@ def game_loop():
         if did_u_win == True:
             print("yoo you won")
         elif did_u_win == False: 
-            print("damnnn you lost lmao!")
+            print("\ndamnnn you lost lmao!")
             time.sleep(1)
             global word
             print(f"btw the word was {word}")
@@ -126,7 +126,7 @@ def game_loop():
             if did_u_win == True:
                 print("yoo you won")
             elif did_u_win == False: 
-                print("damnnn you lost lmao!")
+                print("\ndamnnn you lost lmao!")
                 time.sleep(1)
                 print(f"btw the word was {word}")
             else:
